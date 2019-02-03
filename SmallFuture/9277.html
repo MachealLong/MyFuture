@@ -1,0 +1,1411 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="">
+    <title>再见,2018!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+
+        html {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: "PingFangSC-Regular","sans-serif","STHeitiSC-Light","微软雅黑","Microsoft YaHei";
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            touch-callout: none;
+        }
+
+        html, body, .page_box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page {
+            background-color: #eee;
+        }
+
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+            .page.hide {
+                display: none;
+            }
+
+            /*==================================*/
+
+            .page.inTop {
+                -webkit-animation: ShowTop .5s ease-out both;
+                animation: ShowTop .5s ease-out both;
+            }
+
+            .page.outTop {
+                -webkit-animation: HideTop .5s ease-out both;
+                animation: HideTop .5s ease-out both;
+            }
+
+            .page.inDown {
+                -webkit-animation: ShowDown .5s ease-out both;
+                animation: ShowDown .5s ease-out both;
+            }
+
+            .page.outDown {
+                -webkit-animation: HideDown .5s ease-out both;
+                animation: HideDown .5s ease-out both;
+            }
+
+        @-webkit-keyframes ShowTop {
+            0% {
+                -webkit-transform: translateY(100%);
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+            }
+        }
+
+        @keyframes ShowTop {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes HideTop {
+            0% {
+                -webkit-transform: translateY(0);
+            }
+
+            100% {
+                -webkit-transform: translateY(-100%);
+            }
+        }
+
+        @keyframes HideTop {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @-webkit-keyframes ShowDown {
+            0% {
+                -webkit-transform: translateY(-100%);
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+            }
+        }
+
+        @keyframes ShowDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes HideDown {
+            0% {
+                -webkit-transform: translateY(0);
+            }
+
+            100% {
+                -webkit-transform: translateY(100%);
+            }
+        }
+
+        @keyframes HideDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        /*==================================*/
+
+        .arrow {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: #d00;
+            position: absolute;
+            left: 285px;
+            bottom: 10px;
+            z-index: 99;
+            background: rgba(0,0,0,.5);
+            border-radius: 100px;
+            -webkit-animation: arrow 1.2s .5s ease-in-out infinite;
+            animation: arrow 1.2s .5s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes arrow {
+            0% {
+                -webkit-transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(-50%);
+                opacity: 0
+            }
+        }
+
+        @keyframes arrow {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-50%);
+                opacity: 0
+            }
+        }
+
+        .page1 {
+        }
+
+        .bg1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+            .bg1 img {
+                height: 100%;
+                width: 100%;
+            }
+        /*base code*/
+        .bg-1-animated {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes bg-1-fadeIn {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        @keyframes bg-1-fadeIn {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        .bg-1-fadeIn {
+            -webkit-animation-name: bg-1-fadeIn;
+            animation-name: bg-1-fadeIn
+        }
+
+        .renwu1 {
+            position: absolute;
+            bottom: 80px;
+            right: -50px;
+            z-index: 1;
+        }
+        /*base code*/
+        .renwu-1-animated {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes renwu-1-fadeInRight {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes renwu-1-fadeInRight {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                -ms-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .renwu-1-fadeInRight {
+            -webkit-animation-name: renwu-1-fadeInRight;
+            animation-name: renwu-1-fadeInRight
+        }
+
+        .textbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text-1-1 {
+            top: 15%;
+            font-size: 50px;
+        }
+
+        .text-1-2 {
+            top: 20%;
+            font-size: 67px;
+        }
+
+        .text-1-3 {
+            top: 28%;
+            font-size: 38px;
+        }
+
+        .text-1-4 {
+            top: 32%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-2-1 {
+            top: 15%;
+            font-size: 38px;
+        }
+
+        .text-2-2 {
+            top: 24%;
+            font-size: 78px;
+            color: #ff0;
+        }
+
+        .text-2-3 {
+            top: 33%;
+            font-size: 47px;
+        }
+
+        .text-2-4 {
+            top: 38%;
+            font-size: 72px;
+        }
+
+        .text-2-5 {
+            top: 46%;
+            font-size: 47px;
+        }
+
+        .text-3-1 {
+            top: 20%;
+            font-size: 38px;
+        }
+
+        .text-3-2 {
+            top: 28%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-3-3 {
+            top: 38%;
+            font-size: 38px;
+        }
+
+        .text-3-4 {
+            top: 42%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-3-5 {
+            top: 49%;
+            font-size: 38px;
+        }
+
+        .text-4-1 {
+            top: 20%;
+            font-size: 38px;
+        }
+
+        .text-4-2 {
+            top: 24%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-4-3 {
+            top: 31%;
+            font-size: 38px;
+        }
+
+        .text-4-4 {
+            top: 38%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-4-5 {
+            top: 45%;
+            font-size: 38px;
+        }
+
+        .text-5-1 {
+            top: 12%;
+            font-size: 38px;
+        }
+
+        .text-5-2 {
+            top: 25%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-5-3 {
+            top: 34%;
+            font-size: 38px;
+        }
+
+        .text-6-1 {
+            top: 24%;
+            font-size: 38px;
+        }
+
+        .text-6-2 {
+            top: 33%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-6-3 {
+            top: 41%;
+            font-size: 38px;
+        }
+
+        .text-7-1 {
+            top: 24%;
+            font-size: 38px;
+        }
+
+        .text-7-2 {
+            top: 33%;
+            font-size: 68px;
+            color: #ff0;
+        }
+
+        .text-7-3 {
+            top: 41%;
+            font-size: 38px;
+        }
+
+        .text-8-1 {
+            top: 15%;
+            font-size: 38px;
+            color: #ff0;
+        }
+
+        /*base code*/
+        .text-1-1animated {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes text-1-1fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes text-1-1fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                -ms-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .text-1-1fadeInDown {
+            -webkit-animation-name: text-1-1fadeInDown;
+            animation-name: text-1-1fadeInDown
+        }
+
+        /*base code*/
+        .text-1-2animated {
+            -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes text-1-2fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes text-1-2fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                -ms-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .text-1-2fadeInDown {
+            -webkit-animation-name: text-1-2fadeInDown;
+            animation-name: text-1-2fadeInDown
+        }
+
+        /*base code*/
+        .text-1-3animated {
+            -webkit-animation-duration: 2.7s;
+            animation-duration: 2.7s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes text-1-3fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes text-1-3fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                -ms-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .text-1-3fadeInDown {
+            -webkit-animation-name: text-1-3fadeInDown;
+            animation-name: text-1-3fadeInDown
+        }
+
+        /*base code*/
+        .text-1-4animated {
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes text-1-4fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes text-1-4fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                -ms-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .text-1-4fadeInDown {
+            -webkit-animation-name: text-1-4fadeInDown;
+            animation-name: text-1-4fadeInDown
+        }
+
+        /*base code*/
+        .text-1-5animated {
+            -webkit-animation-duration: 2.7s;
+            animation-duration: 2.7s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes text-1-5fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes text-1-5fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                -ms-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .text-1-5fadeInDown {
+            -webkit-animation-name: text-1-5fadeInDown;
+            animation-name: text-1-5fadeInDown
+        }
+
+        .renwu2 {
+            position: absolute;
+            bottom: 160px;
+            right: 50%;
+            margin: 0 -186px 0 0;
+            z-index: 1;
+        }
+        /*base code*/
+        .renwu-2-animated {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes renwu-2-zoomInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(0.55, .055, .675, .19)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(0.175, .885, .32, 1)
+            }
+        }
+
+        @keyframes renwu-2-zoomInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                -ms-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(0.55, .055, .675, .19)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                -ms-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(0.175, .885, .32, 1)
+            }
+        }
+
+        .renwu-2-zoomInDown {
+            -webkit-animation-name: renwu-2-zoomInDown;
+            animation-name: renwu-2-zoomInDown
+        }
+
+        .renwu-5 {
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            z-index: 1;
+        }
+
+        .wuniu {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            z-index: 2;
+            margin: 0 0 0 -105px;
+        }
+        /*base code*/
+        .wuniu-animated {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes wuniu-zoomInRight {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+                transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(0.55, .055, .675, .19)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+                transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(0.175, .885, .32, 1)
+            }
+        }
+
+        @keyframes wuniu-zoomInRight {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+                -ms-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+                transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(0.55, .055, .675, .19)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+                -ms-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+                transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(0.175, .885, .32, 1)
+            }
+        }
+
+        .wuniu-zoomInRight {
+            -webkit-animation-name: wuniu-zoomInRight;
+            animation-name: wuniu-zoomInRight
+        }
+
+        .taiyang {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+        /*base code*/
+        .taiyang-animated {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes taiyang-rotateIn {
+            0% {
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                -webkit-transform: rotate3d(0, 0, 1, -200deg);
+                transform: rotate3d(0, 0, 1, -200deg);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                -webkit-transform: none;
+                transform: none;
+                opacity: 1
+            }
+        }
+
+        @keyframes taiyang-rotateIn {
+            0% {
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
+                transform-origin: center;
+                -webkit-transform: rotate3d(0, 0, 1, -200deg);
+                -ms-transform: rotate3d(0, 0, 1, -200deg);
+                transform: rotate3d(0, 0, 1, -200deg);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
+                transform-origin: center;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none;
+                opacity: 1
+            }
+        }
+
+        .taiyang-rotateIn {
+            -webkit-animation-name: taiyang-rotateIn;
+            animation-name: taiyang-rotateIn
+        }
+
+        .renwu-8 {
+            position: absolute;
+            bottom: 150px;
+            right: -60px;
+            z-index: 1;
+        }
+        /*base code*/
+        .renwu-8-animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes renwu-8-zoomIn {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.3, .3, .3);
+                transform: scale3d(.3, .3, .3)
+            }
+
+            50% {
+                opacity: 1
+            }
+        }
+
+        @keyframes renwu-8-zoomIn {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.3, .3, .3);
+                -ms-transform: scale3d(.3, .3, .3);
+                transform: scale3d(.3, .3, .3)
+            }
+
+            50% {
+                opacity: 1
+            }
+        }
+
+        .renwu-8-zoomIn {
+            -webkit-animation-name: renwu-8-zoomIn;
+            animation-name: renwu-8-zoomIn
+        }
+
+        .backhomebtn {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            text-align: center;
+        }
+
+            .backhomebtn a {
+                display: inline-block;
+                background: #ffff9b;
+                padding: 10px 30px;
+                border-radius: 5px;
+                font-size: 38px;
+                color: #ff4a4a;
+                text-decoration: none;
+            }
+
+        .maozi {
+            position: absolute;
+            z-index: 2;
+            bottom: 590px;
+            left: 51%;
+            margin: 0 0 0 -35px;
+        }
+        /*base code*/
+        .maozianimated {
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        /*the animation definition*/
+        @-webkit-keyframes maozifadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes maozifadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                -ms-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .maozifadeInDown {
+            -webkit-animation-name: maozifadeInDown;
+            animation-name: maozifadeInDown
+        }
+
+        .shouji {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+            .shouji img {
+                width: 100%;
+            }
+        /*base code*/
+        .shoujianimated {
+        }
+        /*the animation definition*/
+        @-webkit-keyframes shoujibounceInRight {
+            0%, 100%, 60%, 75%, 90% {
+                -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(3000px, 0, 0);
+                transform: translate3d(3000px, 0, 0)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translate3d(-25px, 0, 0);
+                transform: translate3d(-25px, 0, 0)
+            }
+
+            75% {
+                -webkit-transform: translate3d(10px, 0, 0);
+                transform: translate3d(10px, 0, 0)
+            }
+
+            90% {
+                -webkit-transform: translate3d(-5px, 0, 0);
+                transform: translate3d(-5px, 0, 0)
+            }
+
+            100% {
+                -webkit-transform: none;
+                transform: none
+            }
+        }
+
+        @keyframes shoujibounceInRight {
+            0%, 100%, 60%, 75%, 90% {
+                -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(3000px, 0, 0);
+                -ms-transform: translate3d(3000px, 0, 0);
+                transform: translate3d(3000px, 0, 0)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translate3d(-25px, 0, 0);
+                -ms-transform: translate3d(-25px, 0, 0);
+                transform: translate3d(-25px, 0, 0)
+            }
+
+            75% {
+                -webkit-transform: translate3d(10px, 0, 0);
+                -ms-transform: translate3d(10px, 0, 0);
+                transform: translate3d(10px, 0, 0)
+            }
+
+            90% {
+                -webkit-transform: translate3d(-5px, 0, 0);
+                -ms-transform: translate3d(-5px, 0, 0);
+                transform: translate3d(-5px, 0, 0)
+            }
+
+            100% {
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none
+            }
+        }
+
+        .shoujibounceInRight {
+            -webkit-animation-name: shoujibounceInRight;
+            animation-name: shoujibounceInRight
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page_box">
+        <div class="page page1">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-1.png" alt="">
+            </div>
+            <div class="renwu1 renwu-1-animated renwu-1-fadeInRight">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/renwu-1.png" alt="">
+            </div>
+            <div class="textbox text-1-1 text-1-1animated text-1-1fadeInDown" id="jjrName"></div>
+            <div class="textbox text-1-2 text-1-2animated text-1-2fadeInDown">还记得吗?</div>
+            <div class="textbox text-1-3 text-1-3animated text-1-3fadeInDown">今天是我们相识的</div>
+            <div class="textbox text-1-4 text-1-4animated text-1-4fadeInDown" id="RuZhiDay"></div>
+        </div>
+
+        <div class="page page2 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-2.png" alt="">
+            </div>
+            <div class="textbox text-2-1 text-1-1animated text-1-1fadeInDown" id="XzMsg1"></div>
+            <div class="textbox text-2-2 text-1-2animated text-1-2fadeInDown" id="xingZuo"></div>
+            <div class="textbox text-2-3 text-1-3animated text-1-3fadeInDown" id="XzMsg2"></div>
+            <div class="textbox text-2-4 text-1-4animated text-1-4fadeInDown" id="XzMsg3"></div>
+            <div class="textbox text-2-5 text-1-5animated text-1-5fadeInDown" id="XzMsg4"></div>
+            <div class="renwu2 renwu-2-animated renwu-2-zoomInDown">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/renwu-2.png" alt="">
+            </div>
+        </div>
+
+        <div class="page page3 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-3.png" alt="">
+            </div>
+            <div class="textbox text-3-1 text-1-1animated text-1-1fadeInDown">
+                过去的一年里<br>
+                你带看了
+            </div>
+            <div class="textbox text-3-2 text-1-2animated text-1-2fadeInDown" id="daiKanCount"></div>
+            
+        </div>
+
+        <div class="page page4 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-4.png" alt="">
+            </div>
+            <div class="textbox text-4-1 text-1-1animated text-1-1fadeInDown">你上传并通过了</div>
+            <div class="textbox text-4-2 text-1-2animated text-1-2fadeInDown" id="updataHouseCount"></div>
+            <div class="textbox text-4-3 text-1-3animated text-1-3fadeInDown">房源信息</div>
+            <div class="textbox text-4-4 text-1-4animated text-1-4fadeInDown" id="liulanCount"></div>
+            <div class="textbox text-4-5 text-1-4animated text-1-4fadeInDown">
+                购房者<br>
+                因为你的信息<br>
+                而多了一种选择
+            </div>
+        </div>
+
+        <div class="page page5 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-5.png" alt="">
+            </div>
+            <div class="maozi maozianimated maozifadeInDown">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/maozi.png" alt="">
+            </div>
+            <div class="textbox text-5-1 text-1-1animated text-1-1fadeInDown">
+                完成工作量的同时<br>
+                你注重提升自己<br>
+                观看了
+            </div>
+            <div class="textbox text-5-2 text-1-2animated text-1-2fadeInDown" id="eduVideoCount"></div>
+            <div class="textbox text-5-3 text-1-3animated text-1-3fadeInDown">
+                学习视频<br>
+                解锁了更多新技能
+            </div>
+            <div class="renwu-5 renwu-2-animated renwu-2-zoomInDown">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/renwu-5.png" alt="">
+            </div>
+        </div>
+
+        <div class="page page6 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeInn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-6.png" alt="">
+            </div>
+            <div class="shouji shoujibounceInRight">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/shouji.png" alt="">
+            </div>
+            <div class="wuniu wuniu-animated wuniu-zoomInRight">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/wuniu.png" alt="">
+            </div>
+            <div class="textbox text-6-1 text-1-1animated text-1-1fadeInDown">
+                你懂得利用平台和工具<br>
+                推广了小程序客户
+            </div>
+            <div class="textbox text-6-2 text-1-2animated text-1-2fadeInDown" id="spreadWeChatCount"></div>
+            <div class="textbox text-6-3 text-1-3animated text-1-3fadeInDown">
+                为自己打造了一张<br>
+                掷地有声的专业名片
+            </div>
+        </div>
+
+        <div class="page page7 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-7.png" alt="">
+            </div>
+            <div class="taiyang taiyang-animated taiyang-rotateIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/taiyang.png" alt="">
+            </div>
+            <div class="textbox text-7-1 text-1-1animated text-1-1fadeInDown">
+                所有努力都有结果<br>
+                你帮助沈城
+            </div>
+            <div class="textbox text-7-2 text-1-2animated text-1-2fadeInDown" id="dealHouseCount"></div>
+            <div class="textbox text-7-3 text-1-3animated text-1-3fadeInDown">找到了属于他们温暖的家</div>
+        </div>
+
+        <div class="page page8 hide">
+            <div class="bg1 bg-1-animated bg-1-fadeIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-8.png" alt="">
+            </div>
+            <div class="textbox text-8-1 text-1-1animated text-1-1fadeInDown">
+                感谢您<br>
+                过去一年辛苦了！<br>
+                2019<br>
+                与芒果一起<br>
+                蓄势待发
+            </div>
+            <div class="renwu-8 renwu-8-animated renwu-8-zoomIn">
+                <img src="https://g.517cdn.com/c/images/2019/02/01/renwu-8.png" alt="">
+            </div>
+            <div class="backhomebtn"><a href="">再看一遍</a></div>
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <img src="https://g.517cdn.com/c/images/2019/02/01/arr.png" alt="">
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        // 获取URL参数方法
+        function getQueryString(name, str) {//str,用于处理其他格式的转码
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                switch (str) {
+                    case 'decodeURI':
+                        return decodeURI(r[2]);
+                    default:
+                        return unescape(r[2]);
+                }
+            }
+            return null;
+        }
+        // 页面赋值
+        var jjrName = getQueryString("un", 'decodeURI');// 经纪人姓名
+        var RuZhiDay = getQueryString("rdc");// 入职日期
+        var xingZuo = getQueryString("xz", 'decodeURI');// 星座
+        var daiKanCount = getQueryString("dkc");// 带看次数
+        var updataHouseCount = getQueryString("uhc");//上传房源数量
+        var liulanCount = getQueryString("shcc");//用户浏览数量
+        var eduVideoCount = getQueryString("shcc");//网校学习次数
+        var spreadWeChatCount = getQueryString("tcc");// 微信小程序推广次数
+        var dealHouseCount = getQueryString("dhc");// 成交房源数量
+
+        $('#jjrName').html("亲爱的" + jjrName);
+        $('#RuZhiDay').html("第" + RuZhiDay + "天");
+        $('#daiKanCount').html(daiKanCount + '次');
+        $('#updataHouseCount').html(updataHouseCount + '套');
+        $('#liulanCount').html("有" + liulanCount + "位");
+        $('#eduVideoCount').html(eduVideoCount + "个");
+        $('#spreadWeChatCount').html(spreadWeChatCount + "人");
+        $('#dealHouseCount').html(dealHouseCount + "人");
+
+        // 星座
+        switch (xingZuo) {
+            case "白羊座":
+                $('#XzMsg1').html("作为一个阳光乐观<br/>活力四射的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你喜欢");
+                $('#XzMsg3').html("直来直往");
+                $('#XzMsg4').html("的工作方式");
+                break;
+            case "金牛座":
+                $('#XzMsg1').html("作为一个成熟稳重<br/>热爱赚钱的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你能把所有工作安排得");
+                $('#XzMsg3').html("明明白白");
+                break;
+            case "巨蟹座":
+                $('#XzMsg1').html("作为一个有爱心<br/>又居家的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你总是能给客户留下");
+                $('#XzMsg3').html("踏实的印象");
+                break;
+            case "狮子座":
+                $('#XzMsg1').html("作为一个超级自信<br/>霸道总裁的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你雷厉风行的作风");
+                $('#XzMsg3').html("值得称赞");
+                break;
+            case "处女座":
+                $('#XzMsg1').html("作为一个完美主义<br/>不将就的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("日常被黑夜也阻挡不了你");
+                $('#XzMsg3').html("坚定的脚步");
+                break;
+            case "天秤座":
+                $('#XzMsg1').html("作为一个追求平等<br/>善良幽默的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你总能很好地");
+                $('#XzMsg3').html("平衡工作与生活");
+                break;
+            case "天蝎座":
+                $('#XzMsg1').html("作为一个不达目的<br/>不罢休的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你不成功");
+                $('#XzMsg3').html("天理难容");
+                break;
+            case "射手座":
+                $('#XzMsg1').html("作为一个崇尚自由<br/>拒绝束缚的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("话不多说");
+                $('#XzMsg3').html("干就完了");
+                break;
+            case "摩羯座":
+                $('#XzMsg1').html("作为一个责任感<br/>爆棚的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("把工作教给你");
+                $('#XzMsg3').html("准没错儿");
+                break;
+            case "水瓶座":
+                $('#XzMsg1').html("作为一个<br/>脑洞清奇的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你总能用别人想不到的办法");
+                $('#XzMsg3').html("达成目的");
+                break;
+            case "双鱼座":
+                $('#XzMsg1').html("作为一个浪漫<br/>梦幻的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你的情绪总是能");
+                $('#XzMsg3').html("感染到身边的人");
+                break;
+            case "双子座":
+                $('#XzMsg1').html("作为一个跟客户<br/>相谈甚欢的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你就是");
+                $('#XzMsg3').html("优秀本秀");
+                break;
+            default:
+                $('#XzMsg1').html("作为一个跟客户<br/>相谈甚欢的");
+                $('#xingZuo').html(xingZuo);
+                $('#XzMsg2').html("你就是");
+                $('#XzMsg3').html("优秀本秀");
+                break;
+        }
+
+
+        // 页面底部上滑效果
+        var curPage = 1;
+        var PageL = $('.page_box .page').length;
+        var canTouch = false;
+        canTouch = true;
+
+        var startY, endY, diff;
+        $('.page_box').on('touchstart', touchStart);
+        $('.page_box').on('touchmove', touchMove);
+        $('.page_box').on('touchend', touchEnd);
+        function touchStart(e) {
+            //	var touch = e.touches[0];
+            var touch = e.originalEvent.targetTouches[0];
+            startY = touch.pageY;
+        }
+        function touchMove(e) {
+            e.preventDefault();
+            //	var touch = e.touches[0];
+            var touch = e.originalEvent.targetTouches[0];
+            endY = touch.pageY;
+            diff = endY - startY;
+        }
+        function touchEnd(e) {
+            if (Math.abs(diff) > 150 && canTouch) {
+                if (diff > 0) {
+                    if (curPage <= 1) {
+                        return;
+                    }
+
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outDown');
+                    curPage--;
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inDown');
+
+                } else {
+                    if (curPage >= PageL) {
+                        return;
+                    }
+
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outTop');
+                    curPage++;
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inTop');
+
+                }
+                if (curPage >= PageL) {
+                    $('.arrow').hide();
+                } else {
+                    $('.arrow').show();
+                }
+
+                canTouch = false;
+                setTimeout(function () {
+                    canTouch = true;
+                    diff = 0;
+                    $('.page' + (curPage - 1) + ', .page' + (curPage + 1)).addClass('hide');
+                }, 500);
+            }
+        }
+
+        /////////////////////////////////////////////////////////////
+
+        //设置可行内滚动
+        $('#inbox').on('touchstart', function (e) {
+            e.stopPropagation();
+            //document.body.removeEventListener("touchmove", touchMove, false);
+            $('.page_box').unbind('touchmove');
+        });
+        $('#inbox').on('touchend', function (e) {
+            $('.page_box').on('touchmove', touchMove);
+            //document.body.addEventListener("touchmove", touchMove, false);
+        });
+
+    </script>
+</body>
+</html>
