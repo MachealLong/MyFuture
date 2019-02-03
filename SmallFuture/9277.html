@@ -1083,17 +1083,17 @@
     <div class="page_box">
         <div class="page page1">
             <div class="bg1 bg-1-animated bg-1-fadeIn">
-                <img src="https://g.517cdn.com/c/images/2019/02/01/bg-1.png" alt="">
+                <img src="image/bg-1.png" alt="">
             </div>
             <div class="renwu1 renwu-1-animated renwu-1-fadeInRight">
-                <img src="https://g.517cdn.com/c/images/2019/02/01/renwu-1.png" alt="">
+                <img src="image/renwu-1.png" alt="">
             </div>
             <div class="textbox text-1-1 text-1-1animated text-1-1fadeInDown" id="jjrName"></div>
             <div class="textbox text-1-2 text-1-2animated text-1-2fadeInDown">还记得吗?</div>
             <div class="textbox text-1-3 text-1-3animated text-1-3fadeInDown">今天是我们相识的</div>
             <div class="textbox text-1-4 text-1-4animated text-1-4fadeInDown" id="RuZhiDay"></div>
         </div>
-
+<!-- 
         <div class="page page2 hide">
             <div class="bg1 bg-1-animated bg-1-fadeIn">
                 <img src="https://g.517cdn.com/c/images/2019/02/01/bg-2.png" alt="">
@@ -1208,7 +1208,7 @@
                 <img src="https://g.517cdn.com/c/images/2019/02/01/renwu-8.png" alt="">
             </div>
             <div class="backhomebtn"><a href="">再看一遍</a></div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -1242,6 +1242,12 @@
         var spreadWeChatCount = getQueryString("tcc");// 微信小程序推广次数
         var dealHouseCount = getQueryString("dhc");// 成交房源数量
 
+        var date1=new Date("2017-06-23");  //开始时间
+ 
+        var date2=new Date();    //结束时间
+        var date3=date2.getTime()-date1.getTime()  //时间差的毫秒数
+        jjrName="小仙女";
+        RuZhiDay=Math.floor(date3/(24*3600*1000));
         $('#jjrName').html("亲爱的" + jjrName);
         $('#RuZhiDay').html("第" + RuZhiDay + "天");
         $('#daiKanCount').html(daiKanCount + '次');
